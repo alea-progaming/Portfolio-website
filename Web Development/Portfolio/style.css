@@ -1,33 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap");
 
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  text-emphasis: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
   font-family: jaldi;
-  background-color: #0a1128;
-  color: #c7cbd6;
+}
+
+:root {
+  --bg-color: #0a1128;
+  --text-accent: #16db93;
+  --text-color: #d9d9d9;
+  --sec-text-color: #b1b1b1;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 header {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 40px;
-  background-color: #0a1128;
-  gap: 100px;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 8px;
+  margin: 0 10%;
+  background: #0a1128;
+  z-index: 100;
+  font-weight: bold;
 }
 
 .logo {
+  /*change according to figma*/
   font-size: 24px;
-  font-weight: bold;
   color: #d9d9d9;
 }
 
 nav ul {
+  /*change according to figma*/
   list-style-type: none;
   display: flex;
-  gap: 20px;
-  margin: 0;
+  gap: 10px;
+  margin: 0 55em 0 2em;
   padding: 0;
 }
 
@@ -38,7 +61,7 @@ nav a {
 }
 
 .social-icons a {
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 .social-icons img {
