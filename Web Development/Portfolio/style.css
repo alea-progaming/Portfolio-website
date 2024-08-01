@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap');
 
 * {
   margin: 0;
@@ -14,7 +14,7 @@
 :root {
   --bg-color: #0a1128;
   --text-accent: #16db93;
-  --text-color: #d9d9d9;
+  --text-color: #f2f2f2;
   --sec-text-color: #b1b1b1;
 }
 
@@ -32,41 +32,63 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  position: absolute;
   padding: 8px;
-  margin: 0 10%;
-  background: #0a1128;
+  margin: 0 16%;
+  background: var(--bg-color);
   z-index: 100;
   font-weight: bold;
 }
 
-.logo {
+.logo a {
   /*change according to figma*/
-  font-size: 24px;
-  color: #d9d9d9;
+  text-decoration: none;
+  font-size: 48px;
+  color: var(--text-color);
 }
 
 nav ul {
   /*change according to figma*/
   list-style-type: none;
   display: flex;
-  gap: 10px;
-  margin: 0 55em 0 2em;
+  gap: 32px;
+  margin: 0 50rem 0 5em;
   padding: 0;
 }
 
 nav a {
   text-decoration: none;
-  color: white;
-  font-size: 16px;
+  color: var(--text-color);
+  font-size: 24px;
+  transition: ease-in-out 0.3s;
+}
+
+nav a:hover {
+  color: var(--text-accent);
+  font-size: 24px;
 }
 
 .social-icons a {
-  margin-left: 15px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2.5rem;
+  text-decoration: none;
+  width: 4.5rem;
+  height: 4.5rem;
+  background: transparent;
+  font-size: 2.5rem;
+  color: var(--text-color);
+  transition: 0.3s ease-in-out;
 }
 
-.social-icons img {
-  width: 24px;
-  height: 24px;
+.social-icons a:hover {
+  transform: scale(1.3) translateY(-3px);
+}
+
+i .bx .bxl-github {
+  width: 4.5rem;
+  height: 4.5rem;
 }
 
 main {
@@ -78,7 +100,8 @@ main {
 }
 
 .intro {
-  max-width: 600px;
+  max-width: 820px;
+  margin: 200px 0 0;
 }
 
 .intro h1 {
@@ -88,9 +111,67 @@ main {
   color: #d9d9d9;
 }
 
-p.subheader {
+.subheader {
   font-size: 32px;
   margin-top: 0px;
+}
+
+.subheader span {
+  position: relative;
+}
+
+.subheader span::before {
+  content: 'Computer Science Student';
+  color: var(--text-accent);
+  animation: words 20s;
+}
+
+.subheader span::after {
+  content: '';
+  background-color: var(--bg-color);
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 3px solid var(--bg-color);
+  right: -8px;
+  animation: cursor 1.2s infinite, typing 20s steps(19);
+}
+@keyframes cursor {
+  to {
+    border-left: 2px solid var(--text-color);
+  }
+}
+
+@keyframes words {
+  0%,
+  100% {
+    content: 'Computer Science Student.';
+  }
+}
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 8px);
+  }
 }
 
 .name-highlight {
@@ -98,26 +179,24 @@ p.subheader {
   font-weight: bold;
 }
 
-.highlight {
-  color: #16db93;
-}
-
 .description {
+  font-size: 24px;
   margin: 20px 0;
   color: #b1b1b1;
 }
 
 button {
   background-color: transparent;
-  border: 2px solid #16db93;
+  background-color: #16db93;
   padding: 10px 20px;
-  color: #16db93;
+  color: #0a1128;
   cursor: pointer;
   font-size: 16px;
   border-radius: 8px;
+  transition: 0.3s ease-in-out;
 }
 
 button:hover {
-  background-color: #16db93;
-  color: #0a1128;
+  transform: scale(1.1) translateY(-1px);
+  box-shadow: 0 0 10px var(--text-accent);
 }
