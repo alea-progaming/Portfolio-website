@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap");
 
 * {
   margin: 0;
@@ -121,13 +121,13 @@ main {
 }
 
 .subheader span::before {
-  content: 'Computer Science Student';
+  content: "Computer Science Student";
   color: var(--text-accent);
   animation: words 20s;
 }
 
 .subheader span::after {
-  content: '';
+  content: "";
   background-color: var(--bg-color);
   position: absolute;
   width: calc(100% + 8px);
@@ -145,7 +145,7 @@ main {
 @keyframes words {
   0%,
   100% {
-    content: 'Computer Science Student.';
+    content: "Computer Science Student.";
   }
 }
 @keyframes typing {
