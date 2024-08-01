@@ -156,5 +156,277 @@ span {
 }
 .text-animation {
   font-size: 34px;
-  font-weight: 280px;
+  font-weight: 600px;
+  min-width: 280px;
+}
+.text-animation span {
+  position: relative;
+}
+.text-animation span::before {
+  content: "Web Developer";
+  color: var(--main-color);
+  animation: words 20s infinite;
+}
+.text-animation span::after {
+  content: "";
+  background-color: var(--bg-color);
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 3px solid var(--main-color);
+  right: -10px;
+  animation: cursor -0.6s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor {
+  to {
+    border-left: 2px solid var(--main-color);
+  }
+}
+@keyframes words {
+  0%,
+  20% {
+    content: "Web Developer";
+  }
+  21%,
+  40% {
+    content: "Graphic Designer";
+  }
+  41%,
+  60% {
+    content: "UI /UX Designer";
+  }
+  61%,
+  80% {
+    content: "Content Manager";
+  }
+  81%,
+  100% {
+    content: "Software Tester";
+  }
+}
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 8px);
+  }
+}
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  background: var(--bg-color);
+  color: white;
+}
+.about h2 span {
+  color: var(--main-color);
+  text-shadow: 0 0 50px var(--main-color);
+}
+.about-img {
+  border-radius: 50%;
+}
+.about-img img {
+  position: relative;
+  width: 32vw;
+  border-radius: 50%;
+  box-shadow: 0 0 25px var(--main-color);
+  top: 1rem;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+.about-img img:hover {
+  box-shadow: 0 0 50px var(--main-color), 0 0 100px var(--main-color);
+}
+.heading {
+  text-align: center;
+  font-size: 8rem;
+}
+.about-content h2 {
+  text-align: left;
+  line-height: 1.5;
+}
+.about-content h3 {
+  font-size: 2.6rem;
+}
+.about-content p {
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
+}
+.about-content text-animation span::before {
+  content: "Web Developer";
+  color: var(--main-color);
+  animation: words 20s infinite;
+}
+.about-content text-animation span::after {
+  content: "";
+  background-color: var(--second-bg-color);
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 3px solid var(--second-bg-color);
+  right: -10px;
+  animation: cursor -0.6s infinite, typing 20s steps(14) infinite;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+}
+::-webkit-scrollbar-track {
+  background-origin: var(--bg-color);
+  width: 50px;
+}
+.services {
+  background: var(--bg-color);
+  color: white;
+}
+.services h2 {
+  margin-bottom: 5rem;
+  color: white;
+}
+.services-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+.service-box {
+  background-color: var(--main-color);
+  color: black;
+  height: 250px;
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.service-box:hover {
+  background: white;
+  color: var(--main-color);
+  transform: scale(1.03);
+}
+.service-box .service-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  max-height: 200px;
+  justify-content: center;
+  align-items: baseline;
+  padding: 5em;
+}
+.service-info h4 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.service-info p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  max-height: 100px;
+  margin: auto;
+}
+.contact {
+  background-color: var(--second-bg-color);
+}
+.contact h2 {
+  margin-bottom: 3rem;
+  color: white;
+}
+.contact form {
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.contact form .input-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border-radius: 0.8rem;
+  border: 2px solid var(--main-color);
+  margin: 1rem 0;
+  resize: none;
+}
+.contact form .btn {
+  margin-top: 2rem;
+}
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 40px 0;
+  background-color: var(--bg-color);
+}
+.footer .social {
+  text-align: center;
+  padding-bottom: 25px;
+  color: var(--main-color);
+}
+.footer .social a {
+  font-size: 25px;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 10px;
+  transition: 0.3s ease-in-out;
+}
+.footer .social a:hover {
+  transform: scale(1.2) translateY(-10px);
+  background-color: var(--main-color);
+  color: var(--text-color);
+  box-shadow: 0 0 25px var(--main-color);
+}
+.footer ul {
+  margin-top: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
+}
+.footer ul li a {
+  color: white;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease-in-out;
+}
+.footer ul li a:hover {
+  color: var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+}
+.footer .copyright {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 16px;
+  color: white;
 }
