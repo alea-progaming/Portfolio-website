@@ -3,30 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grid Example</title>
+    <title>About Me Section</title>
     <style>
-      .grid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 3fr; /* Two columns: first takes 1 fraction, second takes 2 fractions */
-        gap: 10px;
-        padding: 10px;
-        background-color: #f0f0f0;
+      body {
+        background-color: #0d1128;
+        color: #c7cbd6;
+        font-family: 'Jaldi', sans-serif;
       }
-      .grid-item {
-        background-color: #ff6347;
-        padding: 20px;
-        text-align: center;
-        font-size: 20px;
-        color: white;
+
+      .section-heading {
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+      }
+
+      .section-heading h2 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #c7cbd6;
+        margin: 0;
+        padding-right: 10px;
+      }
+
+      .section-heading .line {
+        flex-grow: 1;
+        height: 1px;
+        background-color: #c7cbd6;
       }
     </style>
   </head>
   <body>
-    <div class="grid-container">
-      <div class="grid-item">Item 1</div>
-      <div class="grid-item">Item 2</div>
-      <div class="grid-item">Item 3</div>
-      <div class="grid-item">Item 4</div>
+    <div class="section-heading">
+      <h2>/ about me</h2>
+      <div class="line"></div>
     </div>
   </body>
 </html>
