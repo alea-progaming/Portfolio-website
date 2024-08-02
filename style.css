@@ -263,3 +263,7 @@ h2 span {
   display: flex;
   flex-direction: row;
 }
+.about-skills {
+  justify-content: center;
+  text-align: justify;
+}
