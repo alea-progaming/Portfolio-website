@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap');
 
 * {
   margin: 0;
@@ -51,6 +51,10 @@ section {
   max-width: 1000px;
   min-height: 50vh;
   padding: 0 0 12%;
+}
+
+span {
+  color: var(--text-accent);
 }
 
 .logo a {
@@ -134,13 +138,13 @@ main {
 }
 
 .subheader span::before {
-  content: "Computer Science Student";
+  content: 'Computer Science Student';
   color: var(--text-accent);
   animation: words 20s;
 }
 
 .subheader span::after {
-  content: "";
+  content: '';
   background-color: var(--bg-color);
   position: absolute;
   width: calc(100% + 8px);
@@ -158,7 +162,7 @@ main {
 @keyframes words {
   0%,
   100% {
-    content: "Computer Science Student.";
+    content: 'Computer Science Student.';
   }
 }
 @keyframes typing {
@@ -191,9 +195,9 @@ main {
   font-weight: bold;
 }
 .description {
-  font-size: 24px;
+  font-size: 2.4rem;
   margin: 20px 0;
-  color: #b1b1b1;
+  color: var(--sec-text-color);
 }
 button {
   background-color: transparent;
@@ -225,10 +229,14 @@ button:hover {
 .about-img img {
   position: relative;
   width: 16vw;
-  box-shadow: #02040c;
+  box-shadow: 0.5rem 0.5rem 3rem #050916;
   border-radius: 4%;
   margin-left: 8rem;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.about-img img:hover {
+  transform: translateY(-10px);
 }
 .heading-container {
   display: flex;
@@ -251,7 +259,7 @@ h2 span {
 
 .heading-container:after {
   background-color: var(--sec-text-color);
-  content: "";
+  content: '';
   justify-content: center;
   height: 1px;
   margin-left: 20px;
@@ -260,10 +268,76 @@ h2 span {
 }
 .about-content {
   position: relative;
+  align-items: flex-start;
   display: flex;
   flex-direction: row;
+  color: var(--sec-text-color);
 }
 .about-skills {
   justify-content: center;
   text-align: justify;
+}
+.about-description {
+  position: relative;
+  top: auto;
+  font-size: 1.8rem;
+  margin-bottom: 1.8rem;
+}
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  margin-right: 16rem;
+}
+.cert-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Adjust the gap to control space between rows */
+  align-items: center;
+  margin: 0 auto;
+  padding: 2rem 2rem 2rem 12%;
+}
+.cert-box {
+  display: flex;
+  gap: 8rem; /* Adjust the gap to control space between columns */
+  align-items: center;
+  width: 100%;
+  max-width: 1000px; /* Ensure it doesn't exceed a reasonable width */
+}
+.org {
+  color: #00ffcc; /* Adjust color for the organization name */
+  font-size: 1.9rem;
+  font-weight: normal;
+  min-width: 150px; /* Ensure a minimum width */
+}
+
+/*                     */
+.describe h1 {
+  font-size: 2.4rem;
+  margin: 0;
+  transition: 0.3s ease-in-out;
+}
+.describe h1:hover {
+  transform: translateX(1rem);
+}
+
+.describe h1 a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.describe .date {
+  font-size: 1.7rem;
+  font-weight: normal;
+  color: #c7cbd6;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.project-box {
+  background-color: #13213a;
+  min-height: 32rem;
 }
