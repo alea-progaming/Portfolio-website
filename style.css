@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap');
 
 * {
   margin: 0;
@@ -68,15 +68,24 @@ nav ul {
 }
 
 nav a {
+  display: flex;
+  justify-content: center;
   text-decoration: none;
   color: var(--text-color);
-  font-size: 24px;
+  font-size: 20px;
   transition: ease-in-out 0.3s;
 }
 
 nav a:hover {
   color: var(--text-accent);
-  font-size: 24px;
+  transform: scale(1.1) translateY(-4px);
+}
+
+
+#menu-icon{
+  font-size: 3.6rem;
+  color: var(--text-accent);
+  display: none;
 }
 
 .social-icons {
@@ -139,13 +148,13 @@ section {
 }
 
 .subheader span::before {
-  content: "Computer Science Student.";
+  content: 'Computer Science Student.';
   color: var(--text-accent);
   animation: words 20s;
 }
 
 .subheader span::after {
-  content: "";
+  content: '';
   background-color: var(--bg-color);
   position: absolute;
   width: calc(100% + 8px);
@@ -163,7 +172,7 @@ section {
 @keyframes words {
   0%,
   100% {
-    content: "Computer Science Student.";
+    content: 'Computer Science Student.';
   }
 }
 @keyframes typing {
@@ -200,18 +209,23 @@ section {
   margin: 20px 0;
   color: var(--sec-text-color);
 }
+
 button {
-  background-color: transparent;
-  background-color: #16db93;
-  padding: 10px 20px;
-  color: #0a1128;
   cursor: pointer;
   font-size: 16px;
+  background-color: #16db93;
   border-radius: 8px;
+  padding: 10px 20px;
+  margin-top: 15px;
   transition: 0.3s ease-in-out;
 }
+button a {
+  background-color: transparent;
+  color: #0a1128;
+  text-decoration: none;
+}
 button:hover {
-  transform: scale(1.1) translateY(-1px);
+  transform: scale(1.1) translateY(-3px);
   box-shadow: 0 0 10px var(--text-accent);
 }
 .about {
@@ -243,7 +257,6 @@ button:hover {
   display: flex;
   align-items: center;
   margin: 20px 0;
-  margin: auto;
   max-width: 1000px;
   min-height: 30vh;
   padding-top: 100px;
@@ -260,7 +273,7 @@ h2 span {
 
 .heading-container:after {
   background-color: var(--sec-text-color);
-  content: "";
+  content: '';
   justify-content: center;
   height: 1px;
   margin-left: 20px;
@@ -421,18 +434,28 @@ h2 span {
     justify-content: space-between;
     padding: 0 7% 0;
   }
+  /* --------------------- */
+  .subheader {
+    font-size: 32px;
+    margin-top: 0px;
+  }
+
+  .subheader span {
+    position: relative;
+  }
+
   .subheader span::before {
-    content: "Computer Science Student.";
+    content: 'Computer Science Student.';
     color: var(--text-accent);
     animation: words 20s;
   }
 
   .subheader span::after {
-    content: "";
+    content: '';
     background-color: var(--bg-color);
     position: absolute;
     width: calc(100% + 8px);
-    height: 25%;
+    height: 100%;
     border-left: 3px solid var(--bg-color);
     right: -10px;
     animation: cursor 1.2s infinite, typing 20s steps(19) infinite;
@@ -447,10 +470,10 @@ h2 span {
     padding: 1rem 3%;
     background: #0a112882;
     backdrop-filter: blur(10px);
-    /* change accordingly */
     border-bottom-left-radius: 2rem;
     border-left: 2px solid var(--text-accent);
     border-bottom: 2px solid var(--text-accent);
+    display: none;
   }
   .navbar.active {
     display: block;
@@ -461,6 +484,10 @@ h2 span {
     font-size: 2rem;
     margin: 3rem 0;
     color: white;
+  }
+  .navbar a:hover {
+    color: var(--text-accent);
+    font-size: 2.4rem;
   }
   .navbar ul {
     display: table-row;
@@ -482,11 +509,17 @@ h2 span {
     height: 4.5rem;
     background: transparent;
     font-size: 2.5rem;
+    transition: 0.3s ease-in-out;
   }
+  .social-icons a:hover {
+  transform: scale(1) none;
+  color: var(--text-accent);
+  font-size: 2.4rem;
+}
   .home {
-    max-height: 100vh;
-    margin-top: 32vh;
-    padding: auto 7rem;
+    flex-direction: column;
+    margin: 32rem 4rem;
+    align-content: center;
   }
 
   .home h1 {
@@ -520,7 +553,6 @@ h2 span {
     margin: 5px;
   }
 
-  /* -------------- */
   .cert-container {
     display: flex;
     flex-direction: column;
@@ -538,7 +570,25 @@ h2 span {
     max-width: 1000px; /* Ensure it doesn't exceed a reasonable width */
   }
 
-  /* --------------- */
+  .about-content {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 3rem;
+    align-items: center;
+    margin: 0 auto;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1000px; /* Ensure it doesn't exceed a reasonable width */
+  }
+
+  .about-img img {
+    position: relative;
+    width: 32vw;
+    margin-left: 0;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+
   .project-container {
     grid-template-columns: 1fr;
   }
