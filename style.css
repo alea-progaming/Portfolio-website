@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap");
 
 * {
   margin: 0;
@@ -58,9 +58,8 @@ span {
 }
 
 .logo a {
-  /*change according to figma*/
   text-decoration: none;
-  font-size: 48px;
+  font-size: 4.8rem;
   color: var(--text-color);
 }
 
@@ -138,19 +137,19 @@ main {
 }
 
 .subheader span::before {
-  content: 'Computer Science Student';
+  content: "Computer Science Student.";
   color: var(--text-accent);
   animation: words 20s;
 }
 
 .subheader span::after {
-  content: '';
+  content: "";
   background-color: var(--bg-color);
   position: absolute;
   width: calc(100% + 8px);
   height: 100%;
   border-left: 3px solid var(--bg-color);
-  right: -8px;
+  right: -6px;
   animation: cursor 1.2s infinite, typing 20s steps(19) infinite;
 }
 @keyframes cursor {
@@ -162,7 +161,7 @@ main {
 @keyframes words {
   0%,
   100% {
-    content: 'Computer Science Student.';
+    content: "Computer Science Student.";
   }
 }
 @keyframes typing {
@@ -259,7 +258,7 @@ h2 span {
 
 .heading-container:after {
   background-color: var(--sec-text-color);
-  content: '';
+  content: "";
   justify-content: center;
   height: 1px;
   margin-left: 20px;
@@ -312,7 +311,6 @@ h2 span {
   min-width: 150px; /* Ensure a minimum width */
 }
 
-/*                     */
 .describe h1 {
   font-size: 2.4rem;
   margin: 0;
@@ -334,10 +332,49 @@ h2 span {
 }
 
 .project-container {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
 }
 .project-box {
   background-color: #13213a;
-  min-height: 32rem;
+  height: 40rem;
+  border-radius: 2rem;
+  transition: 0.1s;
+}
+.project-box:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 0 5px var(--sec-text-color);
+}
+.project-icons {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 2.5rem 2rem;
+  font-size: 2.1rem;
+  background-color: #13213a;
+}
+.project-icons .bxs-folder {
+  color: var(--text-accent);
+}
+.project-icons .bx-link {
+  color: var(--sec-text-color);
+}
+.project-info {
+  position: relative;
+  margin: 0 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.project-info h3 {
+  font-size: 3rem;
+  line-height: 1;
+}
+.project-info p {
+  color: var(--sec-text-color);
+  font-size: 1.8rem;
+}
+.project-info .tools {
+  font-size: 1.5rem;
 }
