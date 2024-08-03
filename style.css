@@ -397,13 +397,106 @@ h2 span {
 /* ------------------------------- */
 @media (max-width: 1285px) {
   html {
-    font-size: 55%;
+    font-size: 60%;
   }
   .project-container {
     padding-bottom: 7rem;
     grid-template-columns: repeat(2, 1fr);
     margin: 0 5rem;
   }
+  #menu-icon {
+    display: block;
+    justify-content: baseline;
+    font-size: 5rem;
+  }
+
+  .header {
+    justify-content: space-between;
+    padding: 0 7% 0;
+  }
+  
+  .subheader {
+    font-size: 32px;
+    margin-top: 0px;
+  }
+
+  .subheader span {
+    position: relative;
+  }
+
+  .subheader span::before {
+    content: 'Computer Science Student.';
+    color: var(--text-accent);
+    animation: words 20s;
+  }
+
+  .subheader span::after {
+    content: '';
+    background-color: var(--bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--bg-color);
+    right: -10px;
+    animation: cursor 1.2s infinite, typing 20s steps(19) infinite;
+  }
+  .navbar {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 100%;
+    right: 0;
+    width: 50%;
+    padding: 1rem 3%;
+    background: #0a112882;
+    backdrop-filter: blur(10px);
+    border-bottom-left-radius: 2rem;
+    border-left: 2px solid var(--text-accent);
+    border-bottom: 2px solid var(--text-accent);
+    display: none;
+  }
+  .navbar.active {
+    display: block;
+  }
+  .navbar a {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    font-size: 2rem;
+    margin: 3rem 0;
+    color: white;
+  }
+  .navbar a:hover {
+    color: var(--text-accent);
+    font-size: 2.4rem;
+  }
+  .navbar ul {
+    display: table-row;
+    align-items: center;
+    margin-left: 0.5rem;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: left;
+  }
+
+  .social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+    text-decoration: none;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: transparent;
+    font-size: 2.5rem;
+    transition: 0.3s ease-in-out;
+  }
+  .social-icons a:hover {
+  transform: scale(1) none;
+  color: var(--text-accent);
+  font-size: 2.4rem;
+}
 }
 @media (max-width: 1100px) {
   header {
@@ -418,11 +511,48 @@ h2 span {
   .cert {
     padding: 7rem;
   }
+  
+  .home {
+    flex-direction: column;
+    margin: 32rem 4rem;
+    align-content: center;
+  }
+
+  .home h1 {
+    font-size: 32px;
+    font-weight: normal;
+    margin: 0;
+    color: #d9d9d9;
+  }
+
+  .subheader {
+    font-size: 16px;
+    margin-top: 0px;
+  }
+
+  .subheader span {
+    position: relative;
+  }
+
+  .heading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    min-height: 12vh;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  .heading-container:after {
+    height: 0.5px;
+    width: 200px;
+    margin: 5px;
+  }
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 895px) {
   html {
-    font-size: 35%;
+    font-size: 55%;
   }
   #menu-icon {
     display: block;
