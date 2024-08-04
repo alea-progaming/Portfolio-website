@@ -394,10 +394,32 @@ h2 span {
   font-size: 1.5rem;
 }
 
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #1d316c;
+  border-radius: 5px;
+}::-webkit-scrollbar-track{
+  background-color: var(--bg-color);
+  width: 40px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  letter-spacing: 2px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  font-size: 14px;
+  color: var(--sec-text-color);
+}
+
 /* ------------------------------- */
 @media (max-width: 1285px) {
   html {
-    font-size: 60%;
+    font-size: 55%;
   }
   .project-container {
     padding-bottom: 7rem;
@@ -507,7 +529,7 @@ h2 span {
     padding-bottom: 7rem;
   }
   .project,
-  .about,
+  .about-content,
   .cert {
     padding: 7rem;
   }
@@ -552,7 +574,7 @@ h2 span {
 
 @media (max-width: 895px) {
   html {
-    font-size: 55%;
+    font-size: 42%;
   }
   #menu-icon {
     display: block;
@@ -722,5 +744,8 @@ h2 span {
 
   .project-container {
     grid-template-columns: 1fr;
+  }
+  .project-box{
+  height: 45rem;
   }
 }
