@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap");
 
 * {
   margin: 0;
@@ -81,8 +81,7 @@ nav a:hover {
   transform: scale(1.1) translateY(-4px);
 }
 
-
-#menu-icon{
+#menu-icon {
   font-size: 3.6rem;
   color: var(--text-accent);
   display: none;
@@ -148,13 +147,13 @@ section {
 }
 
 .subheader span::before {
-  content: 'Computer Science Student.';
+  content: "Computer Science Student.";
   color: var(--text-accent);
   animation: words 20s;
 }
 
 .subheader span::after {
-  content: '';
+  content: "";
   background-color: var(--bg-color);
   position: absolute;
   width: calc(100% + 8px);
@@ -172,7 +171,7 @@ section {
 @keyframes words {
   0%,
   100% {
-    content: 'Computer Science Student.';
+    content: "Computer Science Student.";
   }
 }
 @keyframes typing {
@@ -273,7 +272,7 @@ h2 span {
 
 .heading-container:after {
   background-color: var(--sec-text-color);
-  content: '';
+  content: "";
   justify-content: center;
   height: 1px;
   margin-left: 20px;
@@ -353,6 +352,8 @@ h2 span {
   gap: 1rem;
 }
 .project-box {
+  display: flex;
+  flex-direction: column;
   background-color: #13213a;
   height: 40rem;
   border-radius: 2rem;
@@ -394,13 +395,14 @@ h2 span {
   font-size: 1.5rem;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 10px;
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background-color: #1d316c;
   border-radius: 5px;
-}::-webkit-scrollbar-track{
+}
+::-webkit-scrollbar-track {
   background-color: var(--bg-color);
   width: 40px;
 }
@@ -436,7 +438,7 @@ footer {
     justify-content: space-between;
     padding: 0 7% 0;
   }
-  
+
   .subheader {
     font-size: 32px;
     margin-top: 0px;
@@ -447,13 +449,13 @@ footer {
   }
 
   .subheader span::before {
-    content: 'Computer Science Student.';
+    content: "Computer Science Student.";
     color: var(--text-accent);
     animation: words 20s;
   }
 
   .subheader span::after {
-    content: '';
+    content: "";
     background-color: var(--bg-color);
     position: absolute;
     width: calc(100% + 8px);
@@ -515,10 +517,10 @@ footer {
     transition: 0.3s ease-in-out;
   }
   .social-icons a:hover {
-  transform: scale(1) none;
-  color: var(--text-accent);
-  font-size: 2.4rem;
-}
+    transform: scale(1) none;
+    color: var(--text-accent);
+    font-size: 2.4rem;
+  }
 }
 @media (max-width: 1100px) {
   header {
@@ -533,7 +535,7 @@ footer {
   .cert {
     padding: 7rem;
   }
-  
+
   .home {
     flex-direction: column;
     margin: 32rem 4rem;
@@ -586,7 +588,7 @@ footer {
     justify-content: space-between;
     padding: 0 7% 0;
   }
-  
+
   .subheader {
     font-size: 32px;
     margin-top: 0px;
@@ -597,13 +599,13 @@ footer {
   }
 
   .subheader span::before {
-    content: 'Computer Science Student.';
+    content: "Computer Science Student.";
     color: var(--text-accent);
     animation: words 20s;
   }
 
   .subheader span::after {
-    content: '';
+    content: "";
     background-color: var(--bg-color);
     position: absolute;
     width: calc(100% + 8px);
@@ -665,10 +667,10 @@ footer {
     transition: 0.3s ease-in-out;
   }
   .social-icons a:hover {
-  transform: scale(1) none;
-  color: var(--text-accent);
-  font-size: 2.4rem;
-}
+    transform: scale(1) none;
+    color: var(--text-accent);
+    font-size: 2.4rem;
+  }
   .home {
     flex-direction: column;
     margin: 32rem 4rem;
@@ -745,7 +747,7 @@ footer {
   .project-container {
     grid-template-columns: 1fr;
   }
-  .project-box{
-  height: 45rem;
+  .project-box {
+    height: 45rem;
   }
 }
